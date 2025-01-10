@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Contact</h1>
+    <nav>
+        <a href="/index.html">Home</a> |
+        <a href="/projects/index.html">Projects</a> |
+        <a href="/contact/index.html">Contact</a> |
+        <a href="https://github.com/zhangkevin747" target="_blank">Github</a>
+        <a href="/resume/index.html">Resume</a> |
+    </nav>
+<br>    
+
+    <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <br><br>
+
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" rows="5" cols="30" required></textarea>
+        <br><br>
+
+        <button>Submit</button>
+    </form>
+</body>
+</html>
