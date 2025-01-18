@@ -5,32 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Root styles */
+        :root {
+            --color-accent: oklch(65% 50% 0); /* Accent color */
+            --color-border: oklch(80% 3% 200); /* Cool gray for borders */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 100ch;
+            margin-inline: auto;
+            padding-inline: 1em;
+        }
+
+        nav {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-between; /* Space out links evenly */
+            margin-bottom: 1em;
+            border-bottom: 1px solid var(--color-border); /* Bottom border */
+            padding-bottom: 0.5em;
+        }
+
+        nav a {
+            flex: 1; /* Make links take equal space */
+            text-align: center; /* Center text in each link */
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Use the same text color as parent */
+            padding: 0.5em; /* Add spacing around links */
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid var(--color-accent); /* Accent color on hover */
+        }
+
+        .current {
+            border-bottom: 0.4em solid var(--color-border); /* Thicker border for current page */
+            padding-bottom: 0.1em; /* Adjust padding to counter border height */
+        }
+
+        form {
+            display: grid; /* Enable grid layout */
+            grid-template-columns: auto 1fr; /* Two columns: label and input field */
+            gap: 1em; /* Spacing between elements */
+            max-width: 100%; /* Ensure it adapts to the container */
+            box-sizing: border-box;
+        }
+
+        label {
+            display: contents; /* Let label text and input field align with the grid */
+        }
+
+        input, textarea, button {
+            font: inherit; /* Match the font with the rest of the page */
+            width: 100%; /* Full width for inputs and text areas */
+            padding: 0.5em; /* Add padding for better usability */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+        }
+
+        button {
+            grid-column: 1 / -1; /* Span the button across both columns */
+            padding: 0.75em; /* Additional padding for larger buttons */
+            background-color: var(--color-accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: var(--color-border); /* Subtle hover effect */
+        }
+    </style>
 </head>
 <body>
     <h1>Contact</h1>
     <nav>
-        <a href="/portfolio/index.html">Home</a> |
-        <a href="/portfolio/projects/index.html">Projects</a> |
-        <a href="/portfolio/contact/index.html">Contact</a> |
-        <a href="https://github.com/zhangkevin747" target="_blank">Github</a> |
-        <a href="/portfolio/resume/index.html">Resume</a> |
+        <a href="/portfolio/index.html">Home</a>
+        <a href="/portfolio/projects/index.html">Projects</a>
+        <a href="/portfolio/contact/index.html" class="current">Contact</a>
+        <a href="https://github.com/zhangkevin747" target="_blank">Github</a>
+        <a href="/portfolio/resume/index.html">Resume</a>
     </nav>
-<br>    
-
     <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-        <br><br>
 
         <label for="subject">Subject:</label>
         <input type="text" id="subject" name="subject" required>
-        <br><br>
 
         <label for="body">Message:</label>
         <textarea id="body" name="body" rows="5" cols="30" required></textarea>
-        <br><br>
 
-        <button>Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

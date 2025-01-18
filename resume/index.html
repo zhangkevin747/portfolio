@@ -3,18 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Zhang - Resume</title>
+    <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Root styles */
+        :root {
+            --color-accent: oklch(65% 50% 0); /* Accent color */
+            --color-border: oklch(80% 3% 200); /* Cool gray for borders */
+            --color-background: #f9f9f9; /* Light background color */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 100ch;
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            padding-inline: 1em;
+            background-color: var(--color-background);
+            color: #333;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex; /* Enable Flexbox */
+            justify-content: space-between; /* Space out links evenly */
+            margin-bottom: 1em;
+            border-bottom: 1px solid var(--color-border); /* Bottom border */
+            padding-bottom: 0.5em;
+        }
+
+        nav a {
+            flex: 1; /* Make links take equal space */
+            text-align: center; /* Center text in each link */
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Use the same text color as parent */
+            padding: 0.5em; /* Add spacing around links */
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid var(--color-accent); /* Accent color on hover */
+        }
+
+        .current {
+            border-bottom: 0.4em solid var(--color-border); /* Thicker border for current page */
+            padding-bottom: 0.1em; /* Adjust padding to counter border height */
+        }
+
+        /* Section and headings */
+        main section {
+            margin-bottom: 2em;
+            background: white;
+            padding: 1.5em;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 1.5em;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 0.2em;
+            margin-bottom: 1em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 0.5em;
+        }
+
+        p, ul {
+            margin: 0.5em 0;
+        }
+
+        ul {
+            padding-left: 1.5em;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+    </style>
 </head>
 <body>
+    <h1>Kevin Zhang - Resume</h1>
     <nav>
-        <ul>
-            <a href="/portfolio/index.html">Home</a> |
-            <a href="/portfolio/projects/index.html">Projects</a> |
-            <a href="/portfolio/contact/index.html">Contact</a> |
-            <a href="https://github.com/zhangkevin747" target="_blank">Github</a> |
-            <a href="/portfolio/resume/index.html">Resume</a> |
-        </ul>
+        <a href="/portfolio/index.html">Home</a>
+        <a href="/portfolio/projects/index.html">Projects</a>
+        <a href="/portfolio/contact/index.html">Contact</a>
+        <a href="https://github.com/zhangkevin747" target="_blank">Github</a>
+        <a href="/portfolio/resume/index.html" class="current">Resume</a>
     </nav>
     <main>
         <section>
@@ -22,14 +105,12 @@
                 <h2>Education</h2>
             </header>
             <article>
-                <header>
-                    <h3>University of California, San Diego</h3>
-                </header>
+                <h3>University of California, San Diego</h3>
                 <p>Bachelor of Science in Data Science</p>
-                <p>GPA: 3.98 / 4.0</p>
-                <time>Graduation: June 2026</time>
-                <p>Honors: Provost Honors</p>
-                <p>Relevant Coursework: Data Structures/Algorithms in Java, Data Science Project, Probability & Statistics, Linear Algebra, Statistical Analysis in R, Data Visualization, Data Mining, Database Management</p>
+                <p><strong>GPA:</strong> 3.98 / 4.0</p>
+                <p><strong>Graduation:</strong> June 2026</p>
+                <p><strong>Honors:</strong> Provost Honors</p>
+                <p><strong>Relevant Coursework:</strong> Data Structures/Algorithms in Java, Data Science Project, Probability & Statistics, Linear Algebra, Statistical Analysis in R, Data Visualization, Data Mining, Database Management</p>
             </article>
         </section>
 
@@ -38,11 +119,9 @@
                 <h2>Experience</h2>
             </header>
             <article>
-                <header>
-                    <h3>Clinical Machine Learning Researcher</h3>
-                    <p>UC San Diego Health, San Diego, CA</p>
-                </header>
-                <time>September 2023 – Present</time>
+                <h3>Clinical Machine Learning Researcher</h3>
+                <p><em>UC San Diego Health, San Diego, CA</em></p>
+                <p><strong>September 2023 – Present</strong></p>
                 <ul>
                     <li>Developed a machine learning classifier in Python, implementing Random Forest and XGBoost, to predict response to cancer immunotherapy, analyzing over 9 million patient electronic health records (EHR) in Databricks.</li>
                     <li>Designed optimized SQL queries and data pipelines for large-scale datasets.</li>
@@ -51,11 +130,9 @@
                 </ul>
             </article>
             <article>
-                <header>
-                    <h3>Software Engineer Intern</h3>
-                    <p>Lancaster-Lebanon IU13, Lancaster, Pennsylvania</p>
-                </header>
-                <time>June 2023 – August 2023</time>
+                <h3>Software Engineer Intern</h3>
+                <p><em>Lancaster-Lebanon IU13, Lancaster, Pennsylvania</em></p>
+                <p><strong>June 2023 – August 2023</strong></p>
                 <ul>
                     <li>Redesigned backend systems using SQL, reducing system downtime by 50%.</li>
                     <li>Developed a web app for special education reporting using C# in the .NET framework.</li>
@@ -69,20 +146,16 @@
                 <h2>Projects</h2>
             </header>
             <article>
-                <header>
-                    <h3>Sea Level Rise Anomaly Detection</h3>
-                </header>
-                <p>Tools: Python, Statsmodels, Scikit-learn, TensorFlow, Pandas, Matplotlib</p>
+                <h3>Sea Level Rise Anomaly Detection</h3>
+                <p><strong>Tools:</strong> Python, Statsmodels, Scikit-learn, TensorFlow, Pandas, Matplotlib</p>
                 <ul>
                     <li>Developed predictive models for univariate and multivariate time series forecasting, including ARIMA, SARIMA, and LSTM, to predict daily sea-level anomalies across 12 US East Coast stations.</li>
                     <li>Leveraged 20 years of historical data to train models, achieving 83% accuracy on predictions for the next 10 years.</li>
                 </ul>
             </article>
             <article>
-                <header>
-                    <h3><a href="https://poem-gist.vercel.app/">PoemGist</a></h3>
-                </header>
-                <p>Tools: Python, Flask, ChatGPT API</p>
+                <h3><a href="https://poem-gist.vercel.app/">PoemGist</a></h3>
+                <p><strong>Tools:</strong> Python, Flask, ChatGPT API</p>
                 <ul>
                     <li>Developed a Flask web app using the ChatGPT API to interpret poems from the Poetry Foundation database.</li>
                     <li>Applied LLM Prompt Engineering to improve NLP-based responses.</li>
@@ -90,10 +163,8 @@
                 </ul>
             </article>
             <article>
-                <header>
-                    <h3><a href="https://public.tableau.com/app/profile/sarah.he8574/viz/SanDiegoCrimeAnalysis_17214224864360/SanDiegoCrimeAnalysis">SD Crime Dashboard</a></h3>
-                </header>
-                <p>Tools: Python, Pandas, Matplotlib, Tableau</p>
+                <h3><a href="https://public.tableau.com/app/profile/sarah.he8574/viz/SanDiegoCrimeAnalysis_17214224864360/SanDiegoCrimeAnalysis">SD Crime Dashboard</a></h3>
+                <p><strong>Tools:</strong> Python, Pandas, Matplotlib, Tableau</p>
                 <ul>
                     <li>Developed an interactive dashboard in Tableau for data visualization of San Diego Crime, with geographical and time-based analysis.</li>
                     <li>Performed trend analysis using Python to generate actionable insights.</li>
@@ -115,6 +186,5 @@
             </ul>
         </section>
     </main>
-
 </body>
 </html>

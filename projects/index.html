@@ -5,15 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 1em;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 0.5em;
+        }
+
+        nav a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            padding: 0.5em;
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid #f06;
+        }
+
+        .current {
+            border-bottom: 0.4em solid #ccc;
+            padding-bottom: 0.1em;
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 400%; /* Make h1 significantly larger */
+            margin-bottom: 1em;
+            line-height: 1.1;
+            text-wrap: balance;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 0;
+            line-height: 1.1;
+            text-wrap: balance;
+        }
+
+        /* Projects grid layout */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
+            gap: 1em; /* Space between articles */
+        }
+
+        .projects article {
+            display: grid; /* Subgrid layout for article content */
+            grid-template-rows: subgrid;
+            grid-row: span 3; /* Each article spans 3 rows */
+            background-color: #f9f9f9;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .projects img {
+            max-width: 100%; /* Ensure images fit within their containers */
+            height: auto;
+            margin-bottom: 0.5em;
+        }
+
+        .projects p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Projects</h1>
+    <h1>My Projects</h1>
     <nav>
-        <a href="/portfolio/index.html">Home</a> |
-        <a href="/portfolio/projects/index.html">Projects</a> |
-        <a href="/portfolio/contact/index.html">Contact</a> |
-        <a href="https://github.com/zhangkevin747" target="_blank">Github</a> |
-        <a href="/portfolio/resume/index.html">Resume</a> |
+        <a href="/portfolio/index.html">Home</a>
+        <a href="/portfolio/projects/index.html" class="current">Projects</a>
+        <a href="/portfolio/contact/index.html">Contact</a>
+        <a href="https://github.com/zhangkevin747" target="_blank">Github</a>
+        <a href="/portfolio/resume/index.html">Resume</a>
     </nav>
+    <section class="projects">
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <article>
+            <h2>Lorem Ipsum</h2>
+            <img src="https://vis-society.github.io/labs/2/images/empty.svg" alt="Placeholder">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+    </section>
 </body>
 </html>
