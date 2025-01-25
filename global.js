@@ -13,13 +13,13 @@ let pages = [
     let url = p.url;
     let title = p.title;
   
-    // Determine if the current page is served from a subdirectory
-    const IS_SUBDIRECTORY = location.pathname.split('/').length > 2;
+    // // Determine if the current page is served from a subdirectory
+    // const IS_SUBDIRECTORY = location.pathname.split('/').length > 2;
   
-    // Adjust URL for internal links
-    if (!url.startsWith('http') && IS_SUBDIRECTORY) {
-      url = '../' + url;
-    }
+    // // Adjust URL for internal links
+    // if (!url.startsWith('http') && IS_SUBDIRECTORY) {
+    //   url = '../' + url;
+    // }
   
     let a = document.createElement('a');
     a.href = url;
