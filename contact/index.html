@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../global.js"></script>
     <style>
         /* Root styles */
         :root {
@@ -16,7 +17,7 @@
             font-family: Arial, sans-serif;
             line-height: 1.6;
             max-width: 100ch;
-            margin-inline: auto;
+            margin-inline: max(1em, (100% - 100ch) / 2);
             padding-inline: 1em;
         }
 
@@ -76,16 +77,21 @@
         button:hover {
             background-color: var(--color-border); /* Subtle hover effect */
         }
+
+        .color-scheme {
+            position: relative; /* Position relative to <body> */
+            top: 1rem; /* Offset from the top */
+            right: 1rem; /* Offset from the right */
+            font-size: 80%; /* Consistent font size */
+            font-family: inherit; /* Match the font of the page */
+        }
+
     </style>
 </head>
 <body>
     <h1>Contact</h1>
     <nav>
-        <a href="/portfolio/index.html">Home</a>
-        <a href="/portfolio/projects/index.html">Projects</a>
-        <a href="/portfolio/contact/index.html" class="current">Contact</a>
-        <a href="https://github.com/zhangkevin747" target="_blank">Github</a>
-        <a href="/portfolio/resume/index.html">Resume</a>
+
     </nav>
     <form action="mailto:your_email@example.com" method="POST" enctype="text/plain">
         <label for="email">Email:</label>

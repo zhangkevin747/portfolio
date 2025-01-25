@@ -4,3 +4,24 @@ body {
        */
     font: 100%/1.5 system-ui;
   }
+
+  nav {
+    --border-color: oklch(50% 10% 200 / 40%); /* A darker, semi-transparent color */
+    border-bottom: 2px solid var(--border-color); /* Apply the border color */
+    
+    /* Other styles */
+  }
+  
+
+html {
+  color-scheme: light dark; /* Enable automatic color scheme switching */
+  border-bottom-color: var(--border-color);
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%; /* Smaller font */
+  font-family: inherit; /* Ensure consistent font */
+}
