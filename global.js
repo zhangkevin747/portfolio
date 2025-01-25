@@ -1,9 +1,9 @@
 let pages = [
-    { url: 'index.html', title: 'Home' },
-    { url: 'projects/index.html', title: 'Projects' },
-    { url: 'resume/index.html', title: 'Resume' },
+    { url: '/portfolio/index.html', title: 'Home' },
+    { url: '/portfolio/projects/index.html', title: 'Projects' },
+    { url: '/portfolio/resume/index.html', title: 'Resume' },
     { url: 'https://github.com/zhangkevin747', title: 'Github' },
-    { url: 'contact/index.html', title: 'Contact Me' },
+    { url: '/portfolio/contact/index.html', title: 'Contact Me' },
   ];
   
   let nav = document.createElement('nav');
@@ -12,13 +12,6 @@ let pages = [
   for (let p of pages) {
     let url = p.url;
     let title = p.title;
-
-    const ARE_WE_HOME = document.documentElement.classList.contains('home');
-
-    if (!ARE_WE_HOME && !url.startsWith('http')) {
-      url = '../' + url;
-    }
-
   
     let a = document.createElement('a');
     a.href = url;
