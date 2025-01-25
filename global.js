@@ -5,27 +5,34 @@ let pages = [
     { url: 'https://github.com/zhangkevin747', title: 'Github' },
     { url: 'contact/index.html', title: 'Contact Me' },
   ];
-
-let nav = document.createElement('nav');
-document.body.prepend(nav);
-
-
-for (let p of pages) {
+  
+  let nav = document.createElement('nav');
+  document.body.prepend(nav);
+  
+  for (let p of pages) {
     let url = p.url;
     let title = p.title;
-    const ARE_WE_HOME = document.documentElement.classList.contains('home');
-    url = !ARE_WE_HOME && !url.startsWith('http') ? '../' + url : url;
-
+  
+    // Determine if the current page is served from a subdirectory
+    const IS_SUBDIRECTORY = location.pathname.split('/').length > 2;
+  
+    // Adjust URL for internal links
+    if (!url.startsWith('http') && IS_SUBDIRECTORY) {
+      url = '../' + url;
+    }
+  
     let a = document.createElement('a');
     a.href = url;
     a.textContent = title;
-
-    if (a.host === location.host && a.pathname === location.pathname) {
-        a.classList.add('current');
-      }
+  
+    // Highlight the current page link
+    if (new URL(a.href, location.origin).pathname === location.pathname) {
+      a.classList.add('current');
+    }
+    
     nav.append(a);
   }
-
+  
 // Function to set the color scheme
 function setColorScheme(colorScheme) {
     document.documentElement.style.setProperty('color-scheme', colorScheme);
