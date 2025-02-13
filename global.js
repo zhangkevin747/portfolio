@@ -2,8 +2,9 @@ let pages = [
     { url: '/portfolio/index.html', title: 'Home' },
     { url: '/portfolio/projects/index.html', title: 'Projects' },
     { url: '/portfolio/resume/index.html', title: 'Resume' },
-    { url: 'https://github.com/zhangkevin747', title: 'Github' },
     { url: '/portfolio/contact/index.html', title: 'Contact Me' },
+    { url: '/portfolio/meta/index.html', title: 'Meta' },
+    { url: 'https://github.com/zhangkevin747', title: 'Github' },
   ];
   
   let nav = document.createElement('nav');

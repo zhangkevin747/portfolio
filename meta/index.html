@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../global.js"></script>
+    <style>
+        /* General styles for body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 100ch;
+            margin-inline: max(1em, (100% - 100ch) / 2);
+            padding-inline: 1em;
+        }
+
+        /* Navigation bar styles */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            border-bottom: 1px solid var(--color-border); /* Use CSS variable */
+            padding-bottom: 0.5em;
+        }
+
+
+        nav a {
+            flex: 1;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            padding: 0.5em;
+        }
+
+        nav a:hover {
+            border-bottom: 0.4em solid #f06;
+        }
+
+        .current {
+            border-bottom: 0.4em solid #ccc;
+            padding-bottom: 0.1em;
+        }
+
+        /* Headings */
+        h1 {
+            font-size: 400%; /* Make h1 significantly larger */
+            margin-bottom: 1em;
+            line-height: 1.1;
+            text-wrap: balance;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin: 0;
+            line-height: 1.1;
+            text-wrap: balance;
+        }
+
+        /* Projects grid layout */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive grid */
+            gap: 1em; /* Space between articles */
+        }
+
+        .projects article {
+            display: grid; /* Subgrid layout for article content */
+            grid-template-rows: subgrid;
+            grid-row: span 3; /* Each article spans 3 rows */
+            background-color: #f9f9f9;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .projects img {
+            max-width: 100%; /* Ensure images fit within their containers */
+            height: auto;
+            margin-bottom: 0.5em;
+        }
+
+        .projects p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meta</h1>
+    </header>
+</body>
+</html>
