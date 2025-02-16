@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
     <link rel="stylesheet" href="../styles.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script type="module" src="../global.js"></script>
+    <script type="module" src="main.js"></script>
+
     <style>
         /* General styles for body */
         body {
@@ -91,5 +94,38 @@
     <header>
         <h1>Meta</h1>
     </header>
+
+    <div id="stats" class="summary-container">
+        <h2>Summary</h2>
+        <div class="summary-grid"></div>
+      </div>
+    
+    <h2>Commits by time of day</h2>
+    <div id="chart"></div>
+
+    <dl id="commit-tooltip" class="tooltip">
+        <dt>Commit</dt>
+        <dd>
+          <a href="" id="commit-link" target="_blank"></a>
+        </dd>
+      
+        <dt>Date</dt>
+        <dd id="commit-date"></dd>
+      
+        <dt>Time</dt>
+        <dd id="commit-time"></dd>
+      
+        <dt>Author</dt>
+        <dd id="commit-author"></dd>
+      
+        <dt>Lines Edited</dt>
+        <dd id="commit-lines"></dd>
+      </dl>
+    
+      <div id="selection-count"></div>
+      <div id="language-breakdown"></div>
+      
+
+
 </body>
 </html>

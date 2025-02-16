@@ -25,3 +25,184 @@ html {
   font-size: 80%; /* Smaller font */
   font-family: inherit; /* Ensure consistent font */
 }
+
+.stats {
+  font-family: Arial, sans-serif;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: fit-content;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.stats dl {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+}
+
+.stats dt {
+  font-weight: bold;
+}
+
+.stats dd {
+  margin: 0;
+  text-align: right;
+}
+/* Summary Container */
+.summary-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Grid Layout for Summary */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Adjust based on the number of stats */
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Each Stat Block */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Label Styling */
+.stat-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #666;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+/* Value Styling */
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: black;
+}
+
+.gridlines line {
+  stroke: lightgray;
+  stroke-opacity: 1;
+  stroke-dasharray: 4 4; /* Optional: Makes dashed gridlines */
+}
+
+/* Grid layout for <dl> with class "info" */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Labels on the left, values on the right */
+  gap: 0.5em; /* Spacing between elements */
+  margin: 0;
+}
+
+dl.info dt {
+  font-weight: bold;
+  color: gray; /* Less prominent label styling */
+}
+
+dl.info dd {
+  margin: 0; /* Remove default margin */
+  font-weight: normal;
+}
+
+/* Tooltip Styling */
+.tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
+  border-radius: 6px; /* Rounded corners */
+  padding: 10px; /* Spacing inside */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
+  font-size: 14px;
+  color: #333;
+  display: none; /* Hidden by default */
+  pointer-events: none; /* Prevents interfering with hover */
+}
+
+#selection-count {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#language-breakdown {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Definition list styling */
+#language-breakdown dl {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+}
+
+#language-breakdown dt {
+  font-weight: bold;
+}
+
+#language-breakdown dd {
+  margin: 0 0 0.5rem 0;
+}
+
+
+
+/* Tooltip Labels */
+.tooltip dt {
+  font-weight: bold;
+  color: #666; /* Less prominent than values */
+}
+
+/* Tooltip Values */
+.tooltip dd {
+  margin: 0;
+  font-weight: normal;
+  color: #222; /* Darker for readability */
+}
+
+
+/* Circle hover effects */
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.1;
+  stroke: black;
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+
+
+
